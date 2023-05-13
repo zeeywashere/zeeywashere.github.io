@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feliz Dia das Mães!!😍</title>
+	<style>
+		body {
+			background-color: #000;
+			margin: 0;
+			padding: 0;
+			color: #F5A9BC;
+			font-size: 1.2em;
+			text-align: center;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 200vh;
+		}
+		.btn {
+			margin-top: 20px;
+			font-size: 1.2em;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			background-color: yellow;
+			color: #000;
+		}
+		.btn:hover {
+			background-color: #F7819F;
+		}
+		.treasure {
+			color: yellow;
+			font-size: 2em;
+			margin-top: 50vh;
+			opacity: 0;
+			transition: opacity 1s ease-in-out;
+		}
+		.show {
+			opacity: 1;
+		}
+		h1 {
+			font-size: 2.5em;
+			margin-bottom: 20px;
+		}
+		p {
+			font-size: 1.5em;
+			margin-bottom: 10px;
+		}
+	</style>
+	<script>
+		window.addEventListener('scroll', function() {
+			var treasure = document.querySelector('.treasure');
+			var position = treasure.getBoundingClientRect().top;
+			var screenPosition = window.innerHeight / 2;
+			if (position < screenPosition) {
+				treasure.classList.add('show');
+			}
+		})
+	</script>
+</head>
+<body>
+	<div class="container">
+		<h1>❤Feliz Dia das Mães❤</h1>
+		<p>Desça para baixo para pegar o seu presente.</p>
+		<div class="treasure">✨Caça ao tesouro:✨<br><span style="font-size: 0.5em;">Dica: O seu presente está no quarto de Huan e está em uma mochila <span style="color: blue;">azul</span>.</span></div>
+		<a href="#love"><div class="btn">Bom se você encontrou o seu presente clique aqui !</div></a>
+	</div>
+	<div id="love" style="font-size: 1.5em; margin-top: 50vh;">
+		Mãe, você é a pessoa mais importante da minha vida. Sei que pode parecer clichê, mas não há palavras suficientes para expressar o quanto eu te amo e te admiro. Desde o meu nascimento, você tem sido minha protetora, minha conselheira e minha melhor amiga. Você é a minha fonte de força e inspiração, e eu serei eternamente grato por tudo o que você fez por mim.
+
+		No Dia das Mães, eu quero te agradecer por todas as noites em que ficou acordada cuidando de mim, por todos os sacrifícios que você fez para me dar uma vida melhor e por todo o amor incondicional que você me deu. Eu não seria a pessoa que sou hoje sem você, e tudo o que conquistei até agora é devido à sua
