@@ -1,74 +1,202 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Feliz Dia das Mães!!😍</title>
-	<style>
-		body {
-			background-color: #000;
-			margin: 0;
-			padding: 0;
-			color: #F5A9BC;
-			font-size: 1.2em;
-			text-align: center;
-		}
-		.container {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			height: 200vh;
-		}
-		.btn {
-			margin-top: 20px;
-			font-size: 1.2em;
-			padding: 10px 20px;
-			border: none;
-			border-radius: 5px;
-			cursor: pointer;
-			background-color: yellow;
-			color: #000;
-		}
-		.btn:hover {
-			background-color: #F7819F;
-		}
-		.treasure {
-			color: yellow;
-			font-size: 2em;
-			margin-top: 50vh;
-			opacity: 0;
-			transition: opacity 1s ease-in-out;
-		}
-		.show {
-			opacity: 1;
-		}
-		h1 {
-			font-size: 2.5em;
-			margin-bottom: 20px;
-		}
-		p {
-			font-size: 1.5em;
-			margin-bottom: 10px;
-		}
-	</style>
-	<script>
-		window.addEventListener('scroll', function() {
-			var treasure = document.querySelector('.treasure');
-			var position = treasure.getBoundingClientRect().top;
-			var screenPosition = window.innerHeight / 2;
-			if (position < screenPosition) {
-				treasure.classList.add('show');
-			}
-		})
-	</script>
+    <title>Brainwave.tech</title>
+    <style>
+        /* Código CSS anterior permanece inalterado */
+
+        /* Adicionando animações */
+        @keyframes fade-in {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slide-in-bottom {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(0); }
+        }
+
+        body {
+            animation: fade-in 1s ease-in-out;
+        }
+
+        .container {
+            animation: slide-in-bottom 1s ease-in-out;
+            animation-delay: 0.5s;
+        }
+
+        .feature {
+            animation: slide-in-bottom 1s ease-in-out;
+            animation-delay: 0.5s;
+        }
+
+        .sidebar {
+            animation: slide-in-bottom 1s ease-in-out;
+            animation-delay: 1s;
+        }
+
+        footer {
+            animation: slide-in-bottom 1s ease-in-out;
+            animation-delay: 1.5s;
+        }
+
+        /* Estilo aprimorado */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 48px;
+        }
+
+        .container {
+            margin: 40px auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .sidebar {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .content {
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            clear: both;
+        }
+
+        .content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            color: #555;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .feature-icon {
+            font-size: 24px;
+            margin-right: 10px;
+            color: #ff6600;
+        }
+
+        .feature-text {
+            font-weight: bold;
+        }
+
+        /* Adicionando animação de fade-in para os recursos */
+        .feature.animated {
+            opacity: 1;
+        }
+
+        /* Estilo para links */
+        nav ul li a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            color: #fff;
+        }
+
+        .active {
+            background-color: #555;
+            color: #fff;
+        }
+
+        /* Estilo para botões */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #ff6600;
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #f25500;
+        }
+    </style>
 </head>
 <body>
-	<div class="container">
-		<h1>❤Feliz Dia das Mães❤</h1>
-		<p>Desça para baixo para pegar o seu presente.</p>
-		<div class="treasure">✨Caça ao tesouro:✨<br><span style="font-size: 0.5em;">Dica: O seu presente está no quarto de Huan e está em uma mochila <span style="color: blue;">azul</span>.</span></div>
-		<a href="#love"><div class="btn">Bom se você encontrou o seu presente clique aqui !</div></a>
-	</div>
-	<div id="love" style="font-size: 1.5em; margin-top: 50vh;">
-		Mãe, você é a pessoa mais importante da minha vida. Sei que pode parecer clichê, mas não há palavras suficientes para expressar o quanto eu te amo e te admiro. Desde o meu nascimento, você tem sido minha protetora, minha conselheira e minha melhor amiga. Você é a minha fonte de força e inspiração, e eu serei eternamente grato por tudo o que você fez por mim.
+    <header>
+        <h1>Welcome to <span style="color: #ff6600;">Brainwave.tech</span></h1>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="discord.html">Discord</a></li>
+                    <li><a href="roblox.html">Roblox</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <h2>About Us</h2>
+            <p>Brainwave.tech specializes in providing protection for Discord and Roblox, offering innovative solutions to ensure your security. With a dedicated team that focuses on customer satisfaction, we provide a variety of functions. Trust Brainwave.tech to provide you with the best protection and enjoy the peace of mind knowing that your security is in good hands. Welcome to the future with Brainwave.tech!</p>
+            
+            <h2>Features</h2>
+            <div class="feature">
+                <span class="feature-icon">&#10003;</span>
+                <span class="feature-text">High-level Security</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">&#10003;</span>
+                <span class="feature-text">Innovative Features for Roblox and Discord Platforms</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">&#10003;</span>
+                <span class="feature-text">Custom Bot for Your Discord Server</span>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2023 <span style="color: #ff6600;">Brainwave.tech</span>
+    </footer>
 
-		No Dia das Mães, eu quero te agradecer por todas as noites em que ficou acordada cuidando de mim, por todos os sacrifícios que você fez para me dar uma vida melhor e por todo o amor incondicional que você me deu. Eu não seria a pessoa que sou hoje sem você, e tudo o que conquistei até agora é devido à sua
+    <script>
+        // Adiciona a classe 'animated' aos recursos para ativar a animação de fade-in
+        var features = document.querySelectorAll('.feature');
+        features.forEach(function(feature) {
+            feature.classList.add('animated');
+        });
+    </script>
+</body>
+</html>
