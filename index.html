@@ -1,202 +1,128 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Brainwave.tech</title>
-    <style>
-        /* Código CSS anterior permanece inalterado */
+  <title>Nome da Pessoa - @u9huz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
 
-        /* Adicionando animações */
-        @keyframes fade-in {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
+    .container {
+      text-align: center;
+      padding-top: 50px;
+    }
 
-        @keyframes slide-in-bottom {
-            0% { transform: translateY(100%); }
-            100% { transform: translateY(0); }
-        }
+    .profile-pic {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+      animation: pulse 3s infinite;
+    }
 
-        body {
-            animation: fade-in 1s ease-in-out;
-        }
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        .container {
-            animation: slide-in-bottom 1s ease-in-out;
-            animation-delay: 0.5s;
-        }
+    h1 {
+      color: #fff;
+      font-size: 36px;
+      margin-bottom: 10px;
+      animation: fadeIn 2s ease-in-out;
+    }
 
-        .feature {
-            animation: slide-in-bottom 1s ease-in-out;
-            animation-delay: 0.5s;
-        }
+    .social-buttons {
+      margin-top: 30px;
+      animation: slideIn 2s ease-in-out;
+    }
 
-        .sidebar {
-            animation: slide-in-bottom 1s ease-in-out;
-            animation-delay: 1s;
-        }
+    .social-buttons a {
+      display: inline-block;
+      margin: 10px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      transition: opacity 0.3s ease;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      animation: pulse 2s infinite;
+    }
 
-        footer {
-            animation: slide-in-bottom 1s ease-in-out;
-            animation-delay: 1.5s;
-        }
+    .social-buttons img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        /* Estilo aprimorado */
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 40px;
-            text-align: center;
-        }
+    .social-buttons a:hover {
+      opacity: 0.8;
+    }
 
-        h1 {
-            margin: 0;
-            font-size: 48px;
-        }
+    p {
+      font-size: 18px;
+      margin: 20px 0;
+      animation: fadeIn 2s ease-in-out;
+    }
 
-        .container {
-            margin: 40px auto;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-        }
+    .quote {
+      font-style: italic;
+      font-size: 24px;
+      margin-top: 50px;
+      animation: fadeIn 2s ease-in-out;
+    }
 
-        .sidebar {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 5px;
-        }
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(66, 133, 244, 0.4);
+      }
+      70% {
+        box-shadow: 0 0 0 20px rgba(66, 133, 244, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(66, 133, 244, 0);
+      }
+    }
 
-        .content {
-            padding: 20px;
-            border-radius: 5px;
-        }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            clear: both;
-        }
-
-        .content h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .content p {
-            margin-bottom: 20px;
-            line-height: 1.5;
-            color: #555;
-        }
-
-        .feature {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            color: #555;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        .feature-icon {
-            font-size: 24px;
-            margin-right: 10px;
-            color: #ff6600;
-        }
-
-        .feature-text {
-            font-weight: bold;
-        }
-
-        /* Adicionando animação de fade-in para os recursos */
-        .feature.animated {
-            opacity: 1;
-        }
-
-        /* Estilo para links */
-        nav ul li a {
-            display: block;
-            color: #333;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            background-color: #555;
-            color: #fff;
-        }
-
-        .active {
-            background-color: #555;
-            color: #fff;
-        }
-
-        /* Estilo para botões */
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 5px;
-            background-color: #ff6600;
-            color: #fff;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #f25500;
-        }
-    </style>
+    @keyframes slideIn {
+      0% {
+        transform: translateY(-50px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to <span style="color: #ff6600;">Brainwave.tech</span></h1>
-    </header>
-    <div class="container">
-        <div class="sidebar">
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="discord.html">Discord</a></li>
-                    <li><a href="roblox.html">Roblox</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="content">
-            <h2>About Us</h2>
-            <p>Brainwave.tech specializes in providing protection for Discord and Roblox, offering innovative solutions to ensure your security. With a dedicated team that focuses on customer satisfaction, we provide a variety of functions. Trust Brainwave.tech to provide you with the best protection and enjoy the peace of mind knowing that your security is in good hands. Welcome to the future with Brainwave.tech!</p>
-            
-            <h2>Features</h2>
-            <div class="feature">
-                <span class="feature-icon">&#10003;</span>
-                <span class="feature-text">High-level Security</span>
-            </div>
-            <div class="feature">
-                <span class="feature-icon">&#10003;</span>
-                <span class="feature-text">Innovative Features for Roblox and Discord Platforms</span>
-            </div>
-            <div class="feature">
-                <span class="feature-icon">&#10003;</span>
-                <span class="feature-text">Custom Bot for Your Discord Server</span>
-            </div>
-        </div>
+  <div class="container">
+    <div class="profile-pic">
+      <img src="https://media.discordapp.net/attachments/1072282953566142574/1117120304209211533/peni-parker-into-the-spider-verse_1.gif" alt="Foto de Perfil">
     </div>
-    <footer>
-        &copy; 2023 <span style="color: #ff6600;">Brainwave.tech</span>
-    </footer>
-
-    <script>
-        // Adiciona a classe 'animated' aos recursos para ativar a animação de fade-in
-        var features = document.querySelectorAll('.feature');
-        features.forEach(function(feature) {
-            feature.classList.add('animated');
-        });
-    </script>
+    <h1>@u9huz</h1>
+    <div class="social-buttons">
+      <a href="https://www.roblox.com/users/1959775754/profile"><img src="https://o.remove.bg/downloads/e6577bcd-00ca-44e5-9c61-eab92bdac09c/image-removebg-preview.png" alt="Botão Roblox"></a>
+      <a href="https://discord.gg/JarumctpGb"><img src="https://o.remove.bg/downloads/cb082ad6-951b-49cb-b6ec-7c3cbe48fb61/image-removebg-preview.png" alt="Botão Discord"></a>
+    </div>
+    <p>Staff in Trigon Evo</p>
+    <p class="quote">"Acredite em si mesmo e voe alto!"</p>
+  </div>
 </body>
 </html>
