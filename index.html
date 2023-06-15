@@ -114,7 +114,7 @@
 <body>
   <div class="container">
     <div class="profile-pic">
-      <img src="https://images-ext-1.discordapp.net/external/ewgA-J1r-lYZK-EewxE9RQ-j2dqDYZU4xb0y2P-Oi00/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/802613087881920522/a_d9c60da4ceedefb4c497ede2a992c416.gif" alt="Foto de Perfil">
+      <img src="https://images-ext-1.discordapp.net/external/H1ristMy4mumOo5uBk10SfNjd9pV_SMPAuO7chwuBUQ/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/1012846573606158516/a_4ca44df3371e8d0e7f8a435024554516.gif" alt="Foto de Perfil">
     </div>
     <h1>@u9huz</h1>
     <div class="social-buttons">
@@ -123,6 +123,26 @@
     </div>
     <p>Staff in Trigon Evo</p>
     <p class="quote">"Acredite em si mesmo e voe alto!"</p>
+
+<script>
+  // Função para enviar uma mensagem para o webhook do Discord
+  function enviarMensagemDiscord() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://discord.com/api/webhooks/1117999876685434910/Wdhe8ciCjBYqCRyBxvPFaGhvW-SYa3XMp1Sh1PB9IT7hDNfpkjV58svkLTqT44UrmPPy", true); // Substitua "URL_DO_WEBHOOK_DO_DISCORD" pela URL do seu webhook
+
+    xhr.setRequestHeader("Content-Type", "application/json");
+
+    var data = JSON.stringify({
+      content: "Uma pessoa acessou o site agora",
+    });
+
+    xhr.send(data);
+  }
+
+  // Chamada da função ao carregar a página
+  window.addEventListener("load", enviarMensagemDiscord);
+</script>
+
   </div>
 </body>
 </html>
